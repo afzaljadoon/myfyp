@@ -1,7 +1,9 @@
 import {Route, Routes} from 'react-router-dom'
 import Home from "./components/Home";
 import RegistrationForm from './components/RegistrationForm';
+import Login from './components/Login'
 import Contact from './components/Contact'
+import Proelection from './components/Proelection'
 import React from 'react';
 
 function App() {
@@ -14,8 +16,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
         <Route path='/registrationform' element={<RegistrationForm/>} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/proelection" element={<Proelection />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/proelection" element={<Proelection />} />
         {/* <Route path="/voting" element={<Voting />} /> */}
       
         </Routes>
