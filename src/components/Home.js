@@ -4,7 +4,7 @@ import Hero from './Hero'
 import Features from './Features'
 import About from './About'
 import Steps from './Steps'
-// import Footer from './Footer'
+import Footer from './Footer'
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
        <Features />
        <About />
        <Steps />
-       {/* <Footer />   */}
+       <Footer />  
     </div>
   )
 }
