@@ -4,6 +4,7 @@ import RegistrationForm from './components/RegistrationForm';
 import Login from './components/Login'
 import Contact from './components/Contact'
 import Proelection from './components/Proelection'
+import Voting from './components/Voting'
 import React from 'react';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/proelection" element={<Proelection />} />
-        {/* <Route path="/voting" element={<Voting />} /> */}
+        <Route path="/voting" element={<Voting />} />
       
         </Routes>
     </div>
