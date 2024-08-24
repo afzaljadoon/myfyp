@@ -6,6 +6,7 @@ import Contact from './components/Contact'
 import Proelection from './components/Proelection'
 import Voting from './components/Voting'
 import Scroll from './components/Scroll'
+import Adminlogin from './components/Adminlogin';
 import React from 'react';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/proelection" element={<Proelection />} />
         <Route path="/voting" element={<Voting />} />
+        <Route path="/adminlogin" element={<Adminlogin />} />
       
         </Routes>
     </div>
