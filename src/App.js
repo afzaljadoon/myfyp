@@ -5,13 +5,14 @@ import Login from './components/Login'
 import Contact from './components/Contact'
 import Proelection from './components/Proelection'
 import Voting from './components/Voting'
+import Scroll from './components/Scroll'
 import React from 'react';
 
 function App() {
   return (
     <div>
 
-        {/* <Scroll />  */}
+        <Scroll /> 
         <Routes> 
           
           <Route exact path="/" element={<Home />} />
