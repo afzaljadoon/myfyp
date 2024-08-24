@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Addcandidate = () => {
   const [formData, setFormData] = useState({
@@ -28,31 +29,31 @@ const Addcandidate = () => {
         <ul className="space-y-4 mt-12">
           <li>
             <a href="/candidateDetails" className="flex items-center text-gray-600 hover:text-green-500">
-              <i className="material-icons">info</i>
+              <FaInfoCircle className="text-lg" />
               <p className="ml-2">Candidate Details</p>
             </a>
           </li>
           <li className="text-green-500">
             <a href="#" className="flex items-center">
-              <i className="material-icons">person_add</i>
+              <FaUserPlus className="text-lg" />
               <p className="ml-2">Add Candidate</p>
             </a>
           </li>
           <li>
             <a href="/table_view" className="flex items-center text-gray-600 hover:text-green-500">
-              <i className="material-icons">how_to_reg</i>
+              <FaRegRegistered className="text-lg" />
               <p className="ml-2">Register</p>
             </a>
           </li>
           <li>
             <a href="/changePhase" className="flex items-center text-gray-600 hover:text-green-500">
-              <i className="material-icons">published_with_changes</i>
+              <FaExchangeAlt className="text-lg" />
               <p className="ml-2">Change State</p>
             </a>
           </li>
           <li>
             <a href="/logout" className="flex items-center text-gray-600 hover:text-green-500">
-              <i className="material-icons">logout</i>
+              <FaSignOutAlt className="text-lg" />
               <p className="ml-2">LogOut</p>
             </a>
           </li>

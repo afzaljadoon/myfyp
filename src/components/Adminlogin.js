@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaLock } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -82,12 +83,14 @@ const AdminLogin = () => {
             </div>
           </div>
           <div className="flex items-center justify-between">
+            <Link to='/admindashboard'>
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
             >
               Login
             </button>
+            </Link>
           </div>
         </form>
       </div>

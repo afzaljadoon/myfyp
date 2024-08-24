@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Changephase = () => {
+  const [currentPhase, setCurrentPhase] = useState("Voting");
+
+  const changeState = () => {
+    // Logic to change the phase
+    const newPhase = currentPhase === "Voting" ? "Closed" : "Voting";
+    setCurrentPhase(newPhase);
+    // You can also add additional logic here to make an API call, etc.
+  };
+
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -60,10 +69,10 @@ const Changephase = () => {
               <h4 className="text-lg font-semibold">CHANGE PHASE</h4>
             </div>
             <div className="text-gray-700 mb-4">
-              <span id="currentPhaseAdmin">Current Phase: Voting</span>
+              <span id="currentPhaseAdmin">Current Phase: {currentPhase}</span>
             </div>
             <button
-              onClick={() => App.changeState()}
+              onClick={changeState}
               className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
             >
               Change Phase
