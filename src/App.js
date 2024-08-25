@@ -7,12 +7,12 @@ import Proelection from './components/Proelection'
 import Voting from './components/Voting'
 import Scroll from './components/Scroll'
 import Adminlogin from './components/Adminlogin';
-// import AdminDashboard from './components/AdminDashboard';
 import React from 'react';
 import Candidatedetail from './components/Candidatedetail';
 import Changephase from './components/Changephase';
 import Addcandidate from './components/Addcandidate';
 import Adminregister from './components/Adminregister';
+import Logout from './components/Logout';
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
         <Route path="/changephase" element={<Changephase />} />
         <Route path="/addcandidate" element={<Addcandidate/>} />
         <Route path="/adminregister" element={<Adminregister/>} />
+        <Route path="/logout" element={<Logout />} />
       
         </Routes>
     </div>

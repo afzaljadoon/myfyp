@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Addcandidate = () => {
@@ -23,17 +23,19 @@ const Addcandidate = () => {
     alert("Candidate has been added Successfully!");
   };
 
+  const location = useLocation();  // Get the current route location
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       {/* Sidebar */}
       <div className="w-64 bg-white shadow-md">
         <div className="h-16 flex items-center justify-center bg-green-500">
-          <h1 className="text-2xl font-bold text-white">Best Actor Contest</h1>
+          <h1 className="text-2xl font-bold text-white">Sidebar</h1>
         </div>
         <div className="mt-4">
           <ul className="space-y-2">
             <Link to="/candidatedetail">
-              <li className="w-full">
+              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-green-500 text-white' : ''}`}>
                 <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
@@ -41,7 +43,7 @@ const Addcandidate = () => {
               </li>
             </Link>
             <Link to="/addcandidate">
-              <li className="w-full">
+              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-green-500 text-white' : ''}`}>
                 <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
@@ -49,7 +51,7 @@ const Addcandidate = () => {
               </li>
             </Link>
             <Link to="/adminregister">
-              <li className="w-full">
+              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-green-500 text-white' : ''}`}>
                 <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
                   <FaRegRegistered className="text-lg" />
                   <p className="ml-2">Register</p>
@@ -57,7 +59,7 @@ const Addcandidate = () => {
               </li>
             </Link>
             <Link to="/changephase">
-              <li className="w-full">
+              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-green-500 text-white' : ''}`}>
                 <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
