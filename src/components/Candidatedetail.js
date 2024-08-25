@@ -6,51 +6,51 @@ const Candidatedetail = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-full md:w-1/4 bg-white">
+      <div className="w-64 bg-white shadow-md">
         <div className="h-16 flex items-center justify-center bg-green-500">
           <h1 className="text-2xl font-bold text-white">Best Actor Contest</h1>
         </div>
-        <div className="flex flex-col items-start mt-4">
+        <div className="mt-4">
           <ul className="space-y-2">
             <Link to="/candidatedetail">
-            <li className="w-full">
-              <a href="#" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <FaInfoCircle className="text-lg" />
-                <p className="ml-2">Candidate Details</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaInfoCircle className="text-lg" />
+                  <p className="ml-2">Candidate Details</p>
+                </a>
+              </li>
             </Link>
             <Link to="/addcandidate">
-            <li className="w-full">
-              <a href="/addcandidate" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <FaUserPlus className="text-lg" />
-                <p className="ml-2">Add Candidate</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaUserPlus className="text-lg" />
+                  <p className="ml-2">Add Candidate</p>
+                </a>
+              </li>
             </Link>
             <Link to="/adminregister">
-            <li className="w-full">
-              <a href="/table_view" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <FaRegRegistered className="text-lg" />
-                <p className="ml-2">Register</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaRegRegistered className="text-lg" />
+                  <p className="ml-2">Register</p>
+                </a>
+              </li>
             </Link>
             <Link to="/changephase">
-            <li className="w-full">
-              <a href="#" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <FaExchangeAlt className="text-lg" />
-                <p className="ml-2">Change Phase</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaExchangeAlt className="text-lg" />
+                  <p className="ml-2">Change Phase</p>
+                </a>
+              </li>
             </Link>
             <Link to="/logout">
-            <li className="w-full">
-              <a href="/logout" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <FaSignOutAlt className="text-lg" />
-                <p className="ml-2">LogOut</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaSignOutAlt className="text-lg" />
+                  <p className="ml-2">LogOut</p>
+                </a>
+              </li>
             </Link>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Addcandidate = () => {
@@ -20,56 +20,64 @@ const Addcandidate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Candidate Added:', formData);
-    // Add your submission logic here
     alert("Candidate has been added Successfully!");
   };
 
   return (
-    <div className="flex">
-      <div className="w-1/4 bg-white h-screen p-5">
-        <ul className="space-y-4 mt-12">
-         <Link to="/candidatedetail">
-          <li>
-            <a href="/candidateDetails" className="flex items-center text-gray-600 hover:text-green-500">
-              <FaInfoCircle className="text-lg" />
-              <p className="ml-2">Candidate Details</p>
-            </a>
-          </li>
-          </Link>
-          <Link to='/addcandidate'>
-          <li className="text-green-500">
-            <a href="#" className="flex items-center">
-              <FaUserPlus className="text-lg" />
-              <p className="ml-2">Add Candidate</p>
-            </a>
-          </li>
-          </Link>
-          <li>
-            <a href="/table_view" className="flex items-center text-gray-600 hover:text-green-500">
-              <FaRegRegistered className="text-lg" />
-              <p className="ml-2">Register</p>
-            </a>
-          </li>
-          <Link to='/changephase'>
-          <li>
-            <a href="/changePhase" className="flex items-center text-gray-600 hover:text-green-500">
-              <FaExchangeAlt className="text-lg" />
-              <p className="ml-2">Change State</p>
-            </a>
-          </li>
-          </Link>
-          <Link to='/logout'>
-          <li>
-            <a href="/logout" className="flex items-center text-gray-600 hover:text-green-500">
-              <FaSignOutAlt className="text-lg" />
-              <p className="ml-2">LogOut</p>
-            </a>
-          </li>
-          </Link>
-        </ul>
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+      {/* Sidebar */}
+      <div className="w-64 bg-white shadow-md">
+        <div className="h-16 flex items-center justify-center bg-green-500">
+          <h1 className="text-2xl font-bold text-white">Best Actor Contest</h1>
+        </div>
+        <div className="mt-4">
+          <ul className="space-y-2">
+            <Link to="/candidatedetail">
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaInfoCircle className="text-lg" />
+                  <p className="ml-2">Candidate Details</p>
+                </a>
+              </li>
+            </Link>
+            <Link to="/addcandidate">
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaUserPlus className="text-lg" />
+                  <p className="ml-2">Add Candidate</p>
+                </a>
+              </li>
+            </Link>
+            <Link to="/adminregister">
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaRegRegistered className="text-lg" />
+                  <p className="ml-2">Register</p>
+                </a>
+              </li>
+            </Link>
+            <Link to="/changephase">
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaExchangeAlt className="text-lg" />
+                  <p className="ml-2">Change Phase</p>
+                </a>
+              </li>
+            </Link>
+            <Link to="/logout">
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaSignOutAlt className="text-lg" />
+                  <p className="ml-2">LogOut</p>
+                </a>
+              </li>
+            </Link>
+          </ul>
+        </div>
       </div>
 
-      <div className="w-3/4 bg-gray-100 min-h-screen">
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col bg-gray-100">
         <nav className="bg-transparent p-4 shadow-sm">
           <h2 className="text-2xl font-bold">Add Candidate</h2>
         </nav>

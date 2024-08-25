@@ -12,6 +12,7 @@ import React from 'react';
 import Candidatedetail from './components/Candidatedetail';
 import Changephase from './components/Changephase';
 import Addcandidate from './components/Addcandidate';
+import Adminregister from './components/Adminregister';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/candidatedetail" element={<Candidatedetail />} />
         <Route path="/changephase" element={<Changephase />} />
         <Route path="/addcandidate" element={<Addcandidate/>} />
+        <Route path="/adminregister" element={<Adminregister/>} />
       
         </Routes>
     </div>

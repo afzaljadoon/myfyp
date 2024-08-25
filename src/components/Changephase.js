@@ -12,69 +12,72 @@ const Changephase = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 h-screen bg-white shadow-lg">
-        <div className="mt-12">
-          <ul className="space-y-4">
+      <div className="w-64 bg-white shadow-md">
+        <div className="h-16 flex items-center justify-center bg-green-500">
+          <h1 className="text-2xl font-bold text-white">Best Actor Contest</h1>
+        </div>
+        <div className="mt-4">
+          <ul className="space-y-2">
             <Link to="/candidatedetail">
-            <li className="flex items-center">
-              <a href="/candidateDetails" className="flex items-center space-x-2">
-                <FaInfoCircle className="text-lg" />
-                <p className="text-gray-700">Candidate Details</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaInfoCircle className="text-lg" />
+                  <p className="ml-2">Candidate Details</p>
+                </a>
+              </li>
             </Link>
             <Link to="/addcandidate">
-            <li className="flex items-center">
-              <a href="/addCandidate" className="flex items-center space-x-2">
-                <FaUserPlus className="text-lg" />
-                <p className="text-gray-700">Add Candidate</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaUserPlus className="text-lg" />
+                  <p className="ml-2">Add Candidate</p>
+                </a>
+              </li>
             </Link>
             <Link to="/adminregister">
-            <li className="flex items-center">
-              <a href="/table_view" className="flex items-center space-x-2">
-                <FaRegRegistered className="text-lg" />
-                <p className="text-gray-700">Register</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaRegRegistered className="text-lg" />
+                  <p className="ml-2">Register</p>
+                </a>
+              </li>
             </Link>
             <Link to="/changephase">
-            <li className="flex items-center">
-              <a href="#" className="flex items-center space-x-2 text-green-500">
-                <FaExchangeAlt className="text-lg" />
-                <p>Change Phase</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaExchangeAlt className="text-lg" />
+                  <p className="ml-2">Change Phase</p>
+                </a>
+              </li>
             </Link>
             <Link to="/logout">
-            <li className="flex items-center">
-              <a href="/logout" className="flex items-center space-x-2">
-                <FaSignOutAlt className="text-lg" />
-                <p className="text-gray-700">LogOut</p>
-              </a>
-            </li>
+              <li className="w-full">
+                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                  <FaSignOutAlt className="text-lg" />
+                  <p className="ml-2">LogOut</p>
+                </a>
+              </li>
             </Link>
           </ul>
         </div>
       </div>
 
       {/* Main Panel */}
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col bg-gray-100">
         {/* Navbar */}
-        <nav className="bg-transparent fixed top-0 left-0 w-full flex items-center justify-between px-4 py-2">
-          <div className="text-gray-700">
-            <a href="javascript:;" className="text-xl font-semibold"></a>
+        <nav className="bg-transparent p-4 shadow-sm">
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-bold"></h2>
+            <button className="text-gray-700">
+              <FaBars className="text-lg" />
+            </button>
           </div>
-          <button className="text-gray-700">
-            <FaBars className="text-lg" />
-          </button>
         </nav>
 
         {/* Content */}
-        <div className="p-8 mt-16">
+        <div className="p-8 mt-4">
           <div className="bg-white shadow-md rounded-lg p-4">
             <div className="bg-green-500 text-white text-center py-2 rounded-md mb-4">
               <h4 className="text-lg font-semibold">CHANGE PHASE</h4>
