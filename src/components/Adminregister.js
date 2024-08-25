@@ -45,41 +45,41 @@ const Adminregister = () => {
   const location = useLocation();  // Get the current route location
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-900">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-lg">
-      <div className="h-16 flex items-center justify-center bg-green-500">
+      <div className="w-64 bg-gray-700 shadow-lg">
+      <div className="h-16 flex items-center justify-center bg-gray-800">
           <h1 className="text-2xl font-bold text-white">Sidebar</h1>
         </div>
         <div className="mt-4">
           <ul className="space-y-4">
             <Link to="/candidatedetail">
-              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="block w-full flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
                 </a>
               </li>
             </Link>
             <Link to="/addcandidate">
-              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="block w-full flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
                 </a>
               </li>
             </Link>
             <Link to="/adminregister">
-              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="block w-full flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaRegRegistered className="text-lg" />
                   <p className="ml-2">Register</p>
                 </a>
               </li>
             </Link>
             <Link to="/changephase">
-              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="block w-full flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
                 </a>
@@ -87,7 +87,7 @@ const Adminregister = () => {
             </Link>
             <Link to="/logout">
               <li className="w-full">
-                <a className="block w-full flex items-center p-4 hover:bg-green-500 hover:text-white">
+                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaSignOutAlt className="text-lg" />
                   <p className="ml-2">LogOut</p>
                 </a>
@@ -98,16 +98,11 @@ const Adminregister = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
-        <nav className="bg-transparent p-4">
-          <div className="flex justify-between items-center">
-            <div className="text-xl font-bold"></div>
-          </div>
-        </nav>
-
+      <div className="flex-1 flex flex-col mt-48">
+       
         <div className="p-4 flex-grow">
-          <div className="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto">
-            <h4 className="text-2xl font-bold text-green-600 mb-4">Register</h4>
+          <div className="bg-gray-800 shadow-md rounded-sm p-6 max-w-lg mx-auto">
+            <h4 className="text-2xl font-bold text-gray-100 mb-4">Register</h4>
             {alertMsg && (
               <div className="bg-red-100 text-red-700 p-2 rounded-md mb-4">
                 {alertMsg}
@@ -118,7 +113,7 @@ const Adminregister = () => {
                 <div>
                   <label
                     htmlFor="first_name"
-                    className="block text-gray-700 mb-2"
+                    className="block text-gray-100 mb-2"
                   >
                     First Name
                   </label>
@@ -128,14 +123,14 @@ const Adminregister = () => {
                     name="first_name"
                     value={inputData.first_name}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="last_name"
-                    className="block text-gray-700 mb-2"
+                    className="block text-gray-100 mb-2"
                   >
                     Last Name
                   </label>
@@ -145,7 +140,7 @@ const Adminregister = () => {
                     name="last_name"
                     value={inputData.last_name}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   />
                 </div>
@@ -154,7 +149,7 @@ const Adminregister = () => {
                 <div>
                   <label
                     htmlFor="email_address"
-                    className="block text-gray-700 mb-2"
+                    className="block text-gray-100 mb-2"
                   >
                     Email Address
                   </label>
@@ -164,12 +159,12 @@ const Adminregister = () => {
                     name="email_address"
                     value={inputData.email_address}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="gender" className="block text-gray-700 mb-2">
+                  <label htmlFor="gender" className="block text-gray-100 mb-2">
                     Gender
                   </label>
                   <select
@@ -177,7 +172,7 @@ const Adminregister = () => {
                     name="gender"
                     value={inputData.gender}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   >
                     <option value="" disabled>
@@ -193,7 +188,7 @@ const Adminregister = () => {
                 <div>
                   <label
                     htmlFor="password"
-                    className="block text-gray-700 mb-2"
+                    className="block text-gray-100 mb-2"
                   >
                     Password
                   </label>
@@ -203,14 +198,14 @@ const Adminregister = () => {
                     name="password"
                     value={inputData.password}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="confirm_password"
-                    className="block text-gray-700 mb-2"
+                    className="block text-gray-100 mb-2"
                   >
                     Confirm Password
                   </label>
@@ -220,14 +215,14 @@ const Adminregister = () => {
                     name="confirm_password"
                     value={inputData.confirm_password}
                     onChange={handleChange}
-                    className="w-full p-2 border rounded bg-gray-50"
+                    className="w-full p-2 rounded-sm bg-gray-600 text-white"
                     required
                   />
                 </div>
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-500 text-white p-3 rounded-md hover:bg-green-600 transition duration-300"
+                className="w-full bg-gray-600 text-white p-3 rounded-md hover:bg-gray-700 transition duration-300"
               >
                 Register
               </button>

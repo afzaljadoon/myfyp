@@ -5,41 +5,41 @@ import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt,
 const Candidatedetail = () => {
     const location = useLocation();  // Get the current route location
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-900">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-md">
-        <div className="h-16 flex items-center justify-center bg-green-500">
+      <div className="w-64 bg-gray-700 shadow-md">
+        <div className="h-16 flex items-center justify-center bg-gray-800">
           <h1 className="text-2xl font-bold text-white">Sidebar</h1>
         </div>
         <div className="mt-4">
           <ul className="space-y-2">
             <Link to="/candidatedetail">
-              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
                 </a>
               </li>
             </Link>
             <Link to="/addcandidate">
-              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                  <FaUserPlus className="text-lg" />
-                  <p className="ml-2">Add Candidate</p>
+              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                  <FaUserPlus className="text-lg " />
+                  <p className="ml-2 ">Add Candidate</p>
                 </a>
               </li>
             </Link>
             <Link to="/adminregister">
-              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaRegRegistered className="text-lg" />
                   <p className="ml-2">Register</p>
                 </a>
               </li>
             </Link>
             <Link to="/changephase">
-              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-green-500 text-white' : ''}`}>
-                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''}`}>
+                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
                 </a>
@@ -47,7 +47,7 @@ const Candidatedetail = () => {
             </Link>
             <Link to="/logout">
               <li className="w-full">
-                <a className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaSignOutAlt className="text-lg" />
                   <p className="ml-2">LogOut</p>
                 </a>
@@ -70,11 +70,11 @@ const Candidatedetail = () => {
         </nav>
 
         {/* Content */}
-        <div className="p-4 flex-grow">
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h4 className="text-2xl font-bold text-green-600 mb-4">Candidate Details</h4>
+        <div className="p-4 flex-grow ">
+          <div className="bg-gray-800 shadow-md rounded-sm p-6">
+            <h4 className="text-2xl font-bold text-gray-100 mb-4">Candidate Details</h4>
             <div>
-              <table className="min-w-full bg-white">
+              <table className="min-w-full bg-gray-800 text-white">
                 <thead>
                   <tr>
                     <th className="py-2 px-4 border-b">#</th>
