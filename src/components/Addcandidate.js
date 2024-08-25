@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Addcandidate = () => {
@@ -27,36 +28,44 @@ const Addcandidate = () => {
     <div className="flex">
       <div className="w-1/4 bg-white h-screen p-5">
         <ul className="space-y-4 mt-12">
+         <Link to="/candidatedetail">
           <li>
             <a href="/candidateDetails" className="flex items-center text-gray-600 hover:text-green-500">
               <FaInfoCircle className="text-lg" />
               <p className="ml-2">Candidate Details</p>
             </a>
           </li>
+          </Link>
+          <Link to='/addcandidate'>
           <li className="text-green-500">
             <a href="#" className="flex items-center">
               <FaUserPlus className="text-lg" />
               <p className="ml-2">Add Candidate</p>
             </a>
           </li>
+          </Link>
           <li>
             <a href="/table_view" className="flex items-center text-gray-600 hover:text-green-500">
               <FaRegRegistered className="text-lg" />
               <p className="ml-2">Register</p>
             </a>
           </li>
+          <Link to='/changephase'>
           <li>
             <a href="/changePhase" className="flex items-center text-gray-600 hover:text-green-500">
               <FaExchangeAlt className="text-lg" />
               <p className="ml-2">Change State</p>
             </a>
           </li>
+          </Link>
+          <Link to='/logout'>
           <li>
             <a href="/logout" className="flex items-center text-gray-600 hover:text-green-500">
               <FaSignOutAlt className="text-lg" />
               <p className="ml-2">LogOut</p>
             </a>
           </li>
+          </Link>
         </ul>
       </div>
 

@@ -83,7 +83,7 @@ const AdminLogin = () => {
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <Link to='/admindashboard'>
+            <Link to='/candidatedetail'>
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"

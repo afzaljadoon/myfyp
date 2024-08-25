@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars } from 'react-icons/fa';
 
 const Changephase = () => {
   const [currentPhase, setCurrentPhase] = useState("Voting");
 
   const changeState = () => {
-    // Logic to change the phase
     const newPhase = currentPhase === "Voting" ? "Closed" : "Voting";
     setCurrentPhase(newPhase);
-    // You can also add additional logic here to make an API call, etc.
+    // Additional logic such as API calls can be added here
   };
 
   return (
@@ -16,36 +17,46 @@ const Changephase = () => {
       <div className="w-64 h-screen bg-white shadow-lg">
         <div className="mt-12">
           <ul className="space-y-4">
+            <Link to="/candidatedetail">
             <li className="flex items-center">
               <a href="/candidateDetails" className="flex items-center space-x-2">
-                <i className="material-icons">info</i>
+                <FaInfoCircle className="text-lg" />
                 <p className="text-gray-700">Candidate Details</p>
               </a>
             </li>
+            </Link>
+            <Link to="/addcandidate">
             <li className="flex items-center">
               <a href="/addCandidate" className="flex items-center space-x-2">
-                <i className="material-icons">person_add</i>
+                <FaUserPlus className="text-lg" />
                 <p className="text-gray-700">Add Candidate</p>
               </a>
             </li>
+            </Link>
+            <Link to="/adminregister">
             <li className="flex items-center">
               <a href="/table_view" className="flex items-center space-x-2">
-                <i className="material-icons">how_to_reg</i>
+                <FaRegRegistered className="text-lg" />
                 <p className="text-gray-700">Register</p>
               </a>
             </li>
+            </Link>
+            <Link to="/changephase">
             <li className="flex items-center">
               <a href="#" className="flex items-center space-x-2 text-green-500">
-                <i className="material-icons">published_with_changes</i>
+                <FaExchangeAlt className="text-lg" />
                 <p>Change Phase</p>
               </a>
             </li>
+            </Link>
+            <Link to="/logout">
             <li className="flex items-center">
               <a href="/logout" className="flex items-center space-x-2">
-                <i className="material-icons">logout</i>
+                <FaSignOutAlt className="text-lg" />
                 <p className="text-gray-700">LogOut</p>
               </a>
             </li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -58,7 +69,7 @@ const Changephase = () => {
             <a href="javascript:;" className="text-xl font-semibold"></a>
           </div>
           <button className="text-gray-700">
-            <span className="material-icons">menu</span>
+            <FaBars className="text-lg" />
           </button>
         </nav>
 

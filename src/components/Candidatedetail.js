@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars } from 'react-icons/fa';
 
 const Candidatedetail = () => {
   return (
@@ -10,36 +12,46 @@ const Candidatedetail = () => {
         </div>
         <div className="flex flex-col items-start mt-4">
           <ul className="space-y-2">
+            <Link to="/candidatedetail">
             <li className="w-full">
               <a href="#" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <span className="material-icons">info</span>
+                <FaInfoCircle className="text-lg" />
                 <p className="ml-2">Candidate Details</p>
               </a>
             </li>
+            </Link>
+            <Link to="/addcandidate">
             <li className="w-full">
-              <a href="/addCandidate" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <span className="material-icons">person_add</span>
+              <a href="/addcandidate" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
+                <FaUserPlus className="text-lg" />
                 <p className="ml-2">Add Candidate</p>
               </a>
             </li>
+            </Link>
+            <Link to="/adminregister">
             <li className="w-full">
               <a href="/table_view" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <span className="material-icons">how_to_reg</span>
+                <FaRegRegistered className="text-lg" />
                 <p className="ml-2">Register</p>
               </a>
             </li>
+            </Link>
+            <Link to="/changephase">
             <li className="w-full">
               <a href="#" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <span className="material-icons">published_with_changes</span>
+                <FaExchangeAlt className="text-lg" />
                 <p className="ml-2">Change Phase</p>
               </a>
             </li>
+            </Link>
+            <Link to="/logout">
             <li className="w-full">
               <a href="/logout" className="flex items-center p-4 hover:bg-green-500 hover:text-white">
-                <span className="material-icons">logout</span>
+                <FaSignOutAlt className="text-lg" />
                 <p className="ml-2">LogOut</p>
               </a>
             </li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -51,7 +63,7 @@ const Candidatedetail = () => {
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold"></div>
             <button className="md:hidden p-2 focus:outline-none">
-              <span className="material-icons">menu</span>
+              <FaBars className="text-lg" />
             </button>
           </div>
         </nav>
