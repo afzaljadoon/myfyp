@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars } from 'react-icons/fa';
+import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Changephase = () => {
   const [currentPhase, setCurrentPhase] = useState("Voting");
@@ -22,7 +22,7 @@ const Changephase = () => {
           <ul className="space-y-2">
             <Link to="/candidatedetail">
               <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/candidatedetail" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
                 </a>
@@ -30,7 +30,7 @@ const Changephase = () => {
             </Link>
             <Link to="/addcandidate">
               <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/addcandidate" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
                 </a>
@@ -38,7 +38,7 @@ const Changephase = () => {
             </Link>
             <Link to="/adminregister">
               <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/adminregister" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaRegRegistered className="text-lg" />
                   <p className="ml-2">Register</p>
                 </a>
@@ -46,7 +46,7 @@ const Changephase = () => {
             </Link>
             <Link to="/changephase">
               <li className={`w-full ${location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/changephase" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
                 </a>
@@ -54,7 +54,7 @@ const Changephase = () => {
             </Link>
             <Link to="/logout">
               <li className={`w-full ${location.pathname === '/logout' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/logout" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaSignOutAlt className="text-lg" />
                   <p className="ml-2">LogOut</p>
                 </a>

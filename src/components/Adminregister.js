@@ -55,7 +55,7 @@ const Adminregister = () => {
           <ul className="space-y-4">
             <Link to="/candidatedetail">
               <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/candidatedetail" className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
                 </a>
@@ -63,7 +63,7 @@ const Adminregister = () => {
             </Link>
             <Link to="/addcandidate">
               <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/addcandidate" className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
                 </a>
@@ -71,7 +71,7 @@ const Adminregister = () => {
             </Link>
             <Link to="/adminregister">
               <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/adminregister" className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaRegRegistered className="text-lg" />
                   <p className="ml-2">Register</p>
                 </a>
@@ -79,7 +79,7 @@ const Adminregister = () => {
             </Link>
             <Link to="/changephase">
               <li className={`w-full ${location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/changephase" className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
                 </a>
@@ -87,7 +87,7 @@ const Adminregister = () => {
             </Link>
             <Link to="/logout">
               <li className="w-full">
-                <a className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a href="/logout" className="block w-full flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaSignOutAlt className="text-lg" />
                   <p className="ml-2">LogOut</p>
                 </a>
