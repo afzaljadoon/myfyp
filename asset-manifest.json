@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/myfyp/static/css/main.6273aa90.css",
+    "main.js": "/myfyp/static/js/main.e8acadd6.js",
+    "static/js/453.7b1c5a41.chunk.js": "/myfyp/static/js/453.7b1c5a41.chunk.js",
+    "static/media/loginp.png": "/myfyp/static/media/loginp.c5f1f2d05a90aa581abe.png",
+    "static/media/Profile.png": "/myfyp/static/media/Profile.9ee78d93fbabf96eb43a.png",
+    "static/media/Registeration.png": "/myfyp/static/media/Registeration.3d8f4f4561858f4b7c4c.png",
+    "static/media/Lock.svg": "/myfyp/static/media/Lock.47c0da2862b4680aaba7e5c4bee005ea.svg",
+    "static/media/TimeSpan.svg": "/myfyp/static/media/TimeSpan.584278e9f379024c32827739c600aa0a.svg",
+    "static/media/LowPrice.svg": "/myfyp/static/media/LowPrice.28e20261cf7d2c6477278d634e55b254.svg",
+    "static/media/Key.svg": "/myfyp/static/media/Key.00d6f4e79f7491f46da5676518ce7e50.svg",
+    "static/media/Signin.svg": "/myfyp/static/media/Signin.1e3347e7284f991d17969e8f7b7a1e5d.svg",
+    "static/media/HandCursor.svg": "/myfyp/static/media/HandCursor.5fd3d097e60ff71c81294c1f91bcf052.svg",
+    "static/media/ApprovedDelivery.svg": "/myfyp/static/media/ApprovedDelivery.ab85936b9bfdc8096a1fdfe47f847cd8.svg",
+    "static/media/Vote.svg": "/myfyp/static/media/Vote.588b3b48eab2b4eec3f5725acd538fd5.svg",
+    "index.html": "/myfyp/index.html",
+    "static/media/ethereum.svg": "/myfyp/static/media/ethereum.053514c284656b74343af66d506c16f4.svg",
+    "static/media/Vector.svg": "/myfyp/static/media/Vector.53ca36e1abfc6fe075e49c10754b2598.svg",
+    "main.6273aa90.css.map": "/myfyp/static/css/main.6273aa90.css.map",
+    "main.e8acadd6.js.map": "/myfyp/static/js/main.e8acadd6.js.map",
+    "453.7b1c5a41.chunk.js.map": "/myfyp/static/js/453.7b1c5a41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6273aa90.css",
+    "static/js/main.e8acadd6.js"
+  ]
+}
