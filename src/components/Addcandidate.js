@@ -7,7 +7,8 @@ const Addcandidate = () => {
     name: '',
     party: '',
     age: '',
-    qualification: ''
+    qualification: '',
+    icon: ''  // Default icon
   });
 
   const handleChange = (e) => {
@@ -20,6 +21,7 @@ const Addcandidate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Candidate Added:', formData);
+    setFormData({ name: '', party: '', age: '', qualification: '', icon: '' });
     alert("Candidate has been added Successfully!");
   };
 
@@ -84,7 +86,7 @@ const Addcandidate = () => {
           <h2 className="text-2xl font-bold text-white">Add Candidate</h2>
         </nav>
 
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-40">
           <div className="bg-gray-800 p-8 rounded-md shadow-lg w-full max-w-2xl">
             <h3 className="text-2xl font-bold text-gray-100 mb-6">Add Candidate Information</h3>
             <form onSubmit={handleSubmit}>
@@ -138,9 +140,22 @@ const Addcandidate = () => {
                 </div>
               </div>
 
+              <div>
+                <label htmlFor="icon" className="block text-gray-100 mb-2">Icon</label>
+                <input
+                  type="text"
+                  id="icon"
+                  value={formData.icon}
+                  onChange={handleChange}
+                  className="w-full p-2 rounded-sm bg-gray-600 text-white"
+                  placeholder="Enter icon name (e.g., FaUserPlus)"
+                  required
+                />
+              </div>
+
               <button
                 type="submit"
-                className="w-full bg-gray-600 text-white p-3 rounded-md hover:bg-gray-700 transition duration-300"
+                className="w-full bg-gray-600 text-white p-3 rounded-md hover:bg-gray-700 transition duration-300 mt-6"
               >
                 Add
               </button>

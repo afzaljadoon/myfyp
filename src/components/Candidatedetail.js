@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Candidatedetail = () => {
-    const location = useLocation();  // Get the current route location
+  const location = useLocation(); // Get the current route location
+  
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-900">
       {/* Sidebar */}
@@ -25,7 +26,7 @@ const Candidatedetail = () => {
               <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
                 <a href="/addcandidate" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaUserPlus className="text-lg " />
-                  <p className="ml-2 ">Add Candidate</p>
+                  <p className="ml-2">Add Candidate</p>
                 </a>
               </li>
             </Link>
@@ -61,7 +62,7 @@ const Candidatedetail = () => {
       <div className="flex-1 flex flex-col">
 
         {/* Content */}
-        <div className="p-4 flex-grow ">
+        <div className="p-4 flex-grow">
           <div className="bg-gray-800 shadow-md rounded-sm p-6">
             <h4 className="text-2xl font-bold text-gray-100 mb-4">Candidate Details</h4>
             <div>
@@ -69,6 +70,7 @@ const Candidatedetail = () => {
                 <thead>
                   <tr>
                     <th className="py-2 px-4 border-b">#</th>
+                    <th className="py-2 px-4 border-b">Icon</th>
                     <th className="py-2 px-4 border-b">Name</th>
                     <th className="py-2 px-4 border-b">Age</th>
                     <th className="py-2 px-4 border-b">Party</th>
@@ -78,6 +80,17 @@ const Candidatedetail = () => {
                 </thead>
                 <tbody id="contestantsResultsAdmin">
                   {/* Dynamically rendered rows go here */}
+                  {/* Example:
+                  <tr>
+                    <td className="py-2 px-4 border-b">1</td>
+                    <td className="py-2 px-4 border-b"><FaUserPlus /></td> <!-- Example Icon -->
+                    <td className="py-2 px-4 border-b">John Doe</td>
+                    <td className="py-2 px-4 border-b">45</td>
+                    <td className="py-2 px-4 border-b">Democratic Party</td>
+                    <td className="py-2 px-4 border-b">PhD in Political Science</td>
+                    <td className="py-2 px-4 border-b">1200</td>
+                  </tr>
+                  */}
                 </tbody>
               </table>
               <p id="accountAddress" className="text-center mt-4"></p>
