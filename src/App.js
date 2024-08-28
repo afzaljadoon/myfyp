@@ -13,6 +13,7 @@ import Changephase from './components/Changephase';
 import Addcandidate from './components/Addcandidate';
 import Adminregister from './components/Adminregister';
 import Logout from './components/Logout';
+// import ElectionManager from './components/ElectionManager';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/addcandidate" element={<Addcandidate/>} />
         <Route path="/adminregister" element={<Adminregister/>} />
         <Route path="/logout" element={<Logout />} />
+        {/* <Route path="/electionmanager" element={<ElectionManager/>} /> */}
       
         </Routes>
     </div>
