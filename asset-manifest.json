@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myfyp/static/css/main.6273aa90.css",
-    "main.js": "/myfyp/static/js/main.77eda9bb.js",
+    "main.js": "/myfyp/static/js/main.f51f364e.js",
     "static/js/453.7b1c5a41.chunk.js": "/myfyp/static/js/453.7b1c5a41.chunk.js",
     "static/media/loginp.png": "/myfyp/static/media/loginp.c5f1f2d05a90aa581abe.png",
     "static/media/Profile.png": "/myfyp/static/media/Profile.9ee78d93fbabf96eb43a.png",
@@ -18,11 +18,11 @@
     "static/media/ethereum.svg": "/myfyp/static/media/ethereum.053514c284656b74343af66d506c16f4.svg",
     "static/media/Vector.svg": "/myfyp/static/media/Vector.53ca36e1abfc6fe075e49c10754b2598.svg",
     "main.6273aa90.css.map": "/myfyp/static/css/main.6273aa90.css.map",
-    "main.77eda9bb.js.map": "/myfyp/static/js/main.77eda9bb.js.map",
+    "main.f51f364e.js.map": "/myfyp/static/js/main.f51f364e.js.map",
     "453.7b1c5a41.chunk.js.map": "/myfyp/static/js/453.7b1c5a41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6273aa90.css",
-    "static/js/main.77eda9bb.js"
+    "static/js/main.f51f364e.js"
   ]
 }
