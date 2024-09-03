@@ -16,6 +16,7 @@ import Logout from './components/Logout';
 // import ElectionManager from './components/ElectionManager';
 
 function App() {
+  
   return (
     <div>
 
