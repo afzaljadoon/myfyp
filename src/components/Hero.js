@@ -32,6 +32,7 @@ const Hero = () => {
                 <Link to="/adminlogin">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 md:py-3 lg:py-4 px-4 md:px-6 lg:px-8 rounded">
                   Login As Admin
+                  As you want to change
                 </button>
                 </Link>
               </div>
