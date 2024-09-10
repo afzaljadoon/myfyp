@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaLock } from "react-icons/fa";
-import {Link} from 'react-router-dom'
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -32,8 +31,8 @@ const AdminLogin = () => {
     e.preventDefault();
     if (validateForm()) {
       // Simulating authentication
-      if (email === "admin@example.com" && password === "password123") {
-        navigate("/admin-dashboard");
+      if (email === "jadoonafzal027@gmail.com" && password === "afzal201133") {
+        navigate("/addcandidate");
       } else {
         setError("Invalid email or password");
       }
@@ -83,14 +82,12 @@ const AdminLogin = () => {
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <Link to='/candidatedetail'>
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
             >
               Login
             </button>
-            </Link>
           </div>
         </form>
       </div>

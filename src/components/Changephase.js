@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt } from 'react-icons/fa';
+import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const Changephase = () => {
   const [currentPhase, setCurrentPhase] = useState("Voting");
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Manage sidebar for small screens
   const location = useLocation();  // Get the current route location
 
   const changeState = () => {
@@ -12,11 +13,26 @@ const Changephase = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-900">
+      {/* Mobile Sidebar Toggle Button */}
+      <div className="md:hidden p-4 bg-gray-800 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-white">Change Phase</h1>
+        <FaBars className="text-white text-2xl" onClick={() => setSidebarOpen(true)} />
+      </div>
+
+      {/* Full-screen Overlay when Sidebar is open */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        ></div>
+      )}
+
       {/* Sidebar */}
-      <div className="w-64 bg-gray-700 shadow-md">
-      <div className="h-16 flex items-center justify-center bg-gray-800">
+      <div className={`fixed top-0 left-0 h-screen w-64 bg-gray-700 shadow-md z-30 transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
+        <div className="h-16 flex items-center justify-between bg-gray-800 p-4">
           <h1 className="text-2xl font-bold text-white">Sidebar</h1>
+          <FaTimes className="text-white text-2xl md:hidden" onClick={() => setSidebarOpen(false)} />
         </div>
         <div className="mt-4">
           <ul className="space-y-2">
@@ -66,8 +82,6 @@ const Changephase = () => {
 
       {/* Main Panel */}
       <div className="flex-1 flex flex-col bg-gray-900">
-
-        {/* Content */}
         <div className="p-8 mt-4">
           <div className="bg-gray-800 shadow-md rounded-sm p-4">
             <div className="bg-gray-700 text-white text-center py-2 rounded-md mb-4">
