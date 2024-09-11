@@ -4,6 +4,7 @@ import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt,
 
 const Changephase = () => {
   const [currentPhase, setCurrentPhase] = useState("Closed");
+  // eslint-disable-next-line no-unused-vars
   const [votingTime, setVotingTime] = useState(0); // Time limit in minutes
   const [sidebarOpen, setSidebarOpen] = useState(false); // Manage sidebar for small screens
   const location = useLocation();
