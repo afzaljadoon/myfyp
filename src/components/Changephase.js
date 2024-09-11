@@ -1,21 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const Changephase = () => {
-  const [currentPhase, setCurrentPhase] = useState("Voting");
+  const [currentPhase, setCurrentPhase] = useState("Closed");
+  const [votingTime, setVotingTime] = useState(0); // Time limit in minutes
   const [sidebarOpen, setSidebarOpen] = useState(false); // Manage sidebar for small screens
-  const location = useLocation();  // Get the current route location
+  const location = useLocation();
+
+  useEffect(() => {
+    // Retrieve the phase and voting time from localStorage when the component mounts
+    const savedPhase = localStorage.getItem('votingPhase') || "Closed";
+    const savedVotingTime = localStorage.getItem('votingEndTime') || null;
+
+    setCurrentPhase(savedPhase);
+    if (savedVotingTime) {
+      setVotingTime(savedVotingTime);
+    }
+  }, []);
 
   const changeState = () => {
     const newPhase = currentPhase === "Voting" ? "Closed" : "Voting";
     setCurrentPhase(newPhase);
+
+    if (newPhase === "Voting") {
+      const timeLimit = prompt("Set voting duration in minutes:", "30"); // Admin sets time limit (default 30 minutes)
+      if (timeLimit) {
+        const endTime = new Date().getTime() + timeLimit * 60000; // Set the end time in milliseconds
+        localStorage.setItem('votingEndTime', endTime); // Save the end time
+      }
+    } else {
+      // Clear the voting end time when the phase is Closed
+      localStorage.removeItem('votingEndTime');
+    }
+
+    // Save the phase in localStorage
+    localStorage.setItem('votingPhase', newPhase);
   };
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-900">
-      {/* Mobile Sidebar Toggle Button */}
-      <div className="md:hidden p-4 bg-gray-800 flex justify-between items-center">
+        {/* Mobile Sidebar Toggle Button */}
+        <div className="md:hidden p-4 bg-gray-800 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white">Change Phase</h1>
         <FaBars className="text-white text-2xl" onClick={() => setSidebarOpen(true)} />
       </div>
@@ -80,7 +106,6 @@ const Changephase = () => {
         </div>
       </div>
 
-      {/* Main Panel */}
       <div className="flex-1 flex flex-col bg-gray-900">
         <div className="p-8 mt-4">
           <div className="bg-gray-800 shadow-md rounded-sm p-4">

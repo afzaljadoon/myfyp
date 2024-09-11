@@ -1,9 +1,13 @@
-// import React, { useState } from 'react';
-// import VotingPanel from './VotingPanel';
-// import CandidateDetail from './CandidateDetail';
+// // CandidateContext.js
+// import React, { createContext, useState, useContext } from 'react';
 
-// const CandidateManagement = () => {
+// const CandidateContext = createContext();
+
+// export const useCandidateContext = () => useContext(CandidateContext);
+
+// export const CandidateProvider = ({ children }) => {
 //   const [candidates, setCandidates] = useState([
+//     // Initial candidates
 //     {
 //       name: 'Bapurao',
 //       party: 'Independent',
@@ -51,12 +55,10 @@
 //   ]);
 //   const [selectedCandidate, setSelectedCandidate] = useState(null);
 
-//   // Function to add a new candidate
 //   const addCandidate = (newCandidate) => {
 //     setCandidates([...candidates, newCandidate]);
 //   };
 
-//   // Function to edit an existing candidate
 //   const editCandidate = (updatedCandidate) => {
 //     setCandidates(
 //       candidates.map((candidate) =>
@@ -65,26 +67,22 @@
 //     );
 //   };
 
-//   // Function to delete a candidate
 //   const deleteCandidate = (name) => {
 //     setCandidates(candidates.filter((candidate) => candidate.name !== name));
 //   };
 
 //   return (
-//     <div className="flex flex-col items-center">
-//       <VotingPanel
-//         candidates={candidates}
-//         selectedCandidate={selectedCandidate}
-//         setSelectedCandidate={setSelectedCandidate}
-//       />
-//       <CandidateDetail
-//         candidates={candidates}
-//         addCandidate={addCandidate}
-//         editCandidate={editCandidate}
-//         deleteCandidate={deleteCandidate}
-//       />
-//     </div>
+//     <CandidateContext.Provider
+//       value={{
+//         candidates,
+//         selectedCandidate,
+//         setSelectedCandidate,
+//         addCandidate,
+//         editCandidate,
+//         deleteCandidate,
+//       }}
+//     >
+//       {children}
+//     </CandidateContext.Provider>
 //   );
 // };
-
-// export default CandidateManagement;
