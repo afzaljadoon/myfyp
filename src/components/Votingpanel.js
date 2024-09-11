@@ -115,12 +115,12 @@ const VotingPanel = () => {
                 checked={selectedCandidate?.name === candidate.name}
                 readOnly
               />
-              <span>{candidate.name}</span>
+              <span className="whitespace-nowrap">{candidate.name}</span>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:w-full justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center m-2 sm:mb-0">
               {/* Center the party name */}
-              <span className="mx-auto">{candidate.party}</span>
-              {React.createElement(Icons[candidate.icon] || Icons.FaUserPlus, { className: 'w-6 h-6' })}
+              <span className="items-center md:w-40 md:mr-24 sm:mr-8 whitespace-nowrap ">{candidate.party}</span>
+              {React.createElement(Icons[candidate.icon] || Icons.FaUserPlus, { className: 'mt-2 w-6 h-6' })}
             </div>
           </div>
         ))}

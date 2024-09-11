@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import * as Icons from 'react-icons/fa'; // Import all Fa icons
-import { FaTrashAlt, FaEdit, FaSave, FaInfoCircle, FaUserPlus, FaRegRegistered, FaExchangeAlt, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa';
+import * as Icons from 'react-icons/fa';
+import {
+  FaTrashAlt,
+  FaEdit,
+  FaSave,
+  FaInfoCircle,
+  FaUserPlus,
+  FaRegRegistered,
+  FaExchangeAlt,
+  FaSignOutAlt,
+  FaBars,
+  FaTimes
+} from 'react-icons/fa';
 
 const Candidatedetail = () => {
   const [candidates, setCandidates] = useState([]);
@@ -43,6 +54,16 @@ const Candidatedetail = () => {
     });
   };
 
+  // Function to reset votes for all candidates
+  const handleResetVotes = () => {
+    const updatedCandidates = candidates.map(candidate => ({
+      ...candidate,
+      votes: 0,
+    }));
+    setCandidates(updatedCandidates);
+    localStorage.setItem('candidates', JSON.stringify(updatedCandidates));
+  };
+
   // Close the sidebar when clicked outside or on the close button
   const closeSidebar = () => {
     setIsSidebarOpen(false);
@@ -68,7 +89,6 @@ const Candidatedetail = () => {
       <div className={`fixed top-0 left-0 h-screen w-64 bg-gray-700 shadow-md z-30 transform transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
         <div className="h-16 flex items-center justify-between bg-gray-800 p-4">
           <h1 className="text-2xl font-bold text-white">Sidebar</h1>
-          {/* Close Button */}
           <FaTimes className="text-white text-2xl md:hidden" onClick={closeSidebar} />
         </div>
         <div className="mt-4">
@@ -124,16 +144,16 @@ const Candidatedetail = () => {
         </nav>
 
         {/* Responsive Table */}
-        <div className="overflow-x-auto mt-10 px-">
+        <div className="overflow-x-auto mt-6 px-4 sm:px-6 lg:px-8">
           <table className="table-auto w-full bg-gray-800 text-white rounded-lg">
             <thead>
-              <tr className="w-full bg-gray-700">
+              <tr className="bg-gray-700">
                 <th className="p-2 text-left w-1/6">Name</th>
                 <th className="p-2 text-left w-1/6">Party</th>
                 <th className="p-2 text-left w-1/6">Age</th>
                 <th className="p-2 text-left w-1/6">Qualification</th>
                 <th className="p-2 text-left w-1/7">Icon</th>
-                <th className="p-2 text-left w-1/7">Votes</th> {/* New Votes Column */}
+                <th className="p-2 text-left w-1/7">Votes</th>
                 <th className="p-2 text-left w-1/7">Actions</th>
               </tr>
             </thead>
@@ -187,7 +207,7 @@ const Candidatedetail = () => {
                           className="w-full bg-gray-600 text-white p-2 rounded-sm"
                         />
                       </td>
-                      <td className="p-2">{candidate.votes || 0}</td> {/* Display the vote count */}
+                      <td className="p-2">{candidate.votes || 0}</td>
                       <td className="p-2">
                         <button
                           className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded transition-all"
@@ -206,7 +226,7 @@ const Candidatedetail = () => {
                       <td className="p-2">
                         {React.createElement(Icons[candidate.icon] || Icons.FaUser)}
                       </td>
-                      <td className="p-2">{candidate.votes || 0}</td> {/* Display the vote count */}
+                      <td className="p-2">{candidate.votes || 0}</td>
                       <td className="p-2 space-x-2">
                         <button
                           className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded transition-all"
@@ -227,6 +247,14 @@ const Candidatedetail = () => {
               ))}
             </tbody>
           </table>
+          <div className="mt-4 text-right">
+            <button
+              className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-all"
+              onClick={handleResetVotes}
+            >
+              Reset Votes
+            </button>
+          </div>
         </div>
       </div>
     </div>
