@@ -32,7 +32,7 @@ const PersonalInfo = () => {
               </div>
               <div>
                 <h3 className="text-xl text-blue-400">Father's/Mother's Name:</h3>
-                <p className="text-white font-bold text-2xl">Papa John Doe</p>
+                <p className="text-white font-bold text-2xl">Smith John</p>
               </div>
               <div>
                 <h3 className="text-xl text-blue-400">Age:</h3>
@@ -40,16 +40,17 @@ const PersonalInfo = () => {
               </div>
               <div>
                 <h3 className="text-xl text-blue-400">Mobile Number:</h3>
-                <p className="font-bold text-2xl">+91 9191505010</p>
+                <p className="font-bold text-2xl">+92 333 4563654</p>
               </div>
               <div>
-                <h3 className="text-xl text-blue-400">Aadhar Number:</h3>
-                <p className="text-white font-bold text-2xl">6100 4080 9126 0909</p>
+                <h3 className="text-xl text-blue-400">CNIC Number:</h3>
+                <p className="text-white font-bold text-2xl">16000-4300001-0</p>
               </div>
               <div className="sm:col-span-2">
                 <h3 className="text-xl text-blue-400">Address:</h3>
                 <p className="text-white font-bold text-2xl">
-                  XYZ, Street No. 92, Gurgaon, Uttar Pradesh, 100021
+                Jhumra Road LG Unit Jaranwala
+                Distt. Faisalabad
                 </p>
               </div>
               <div>

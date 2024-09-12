@@ -10,18 +10,18 @@ const Footer = () => {
         <div className="flex flex-col items-start mb-6 md:mb-0 w-full md:w-auto ">
           <div className="mb-4 ">
             <div className="font-bold text-xl text-blue-500 ">Contact:</div>
-            <div>1800 9090 32</div>
-            <div>1800 9090 64</div>
+            <div>+92 314 9961015</div>
+            <div>+92 331 6490200</div>
           </div>
           <div className="mb-4">
             <div className="font-bold text-xl text-blue-500 ">Helpline Number:</div>
-            <div>9090 1234 46</div>
-            <div>9090 1234 47</div>
+            <div>042-90000301-0</div>
+            <div>042-90000101-0</div>
           </div>
           <div className="mb-4">
             <div className="font-bold text-xl text-blue-500">Email:</div>
-            <div>complaint@electionindia.gov.in</div>
-            <div>info@electionindia.gov.in</div>
+            <div>hammad.63100@gmail.com</div>
+            <div>jadoonafzal027@gmail.com</div>
           </div>
         </div>
 

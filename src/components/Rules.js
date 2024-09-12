@@ -5,12 +5,12 @@ const Rules = () => {
     <div className="min-h-screen bg-gray-800 flex flex-col items-center justify-center p-6">
       <div className="bg-gray-100 p-6 rounded shadow-md w-full max-w-5xl text-lg sm:text-xl lg:text-2xl">
         <h1 className="text-base sm:text-lg lg:text-xl font-bold mb-4 mt-4">
-          This election is being conducted by the election commission of India.
+          This election is being conducted by the election commission of Pakistan.
         </h1>
         <div className="border border-blue-600 p-4">
           <p className="mb-4">
             You, as being a member of the constituency under the constituencies
-            of Uttar Pradesh State Election, are allowed to vote. Please take
+            of Khyber Pakhtunkhwa Province Election, are allowed to vote. Please take
             the following steps in order to cast a valid vote. You are requested
             to cast vote on your own decision and not by being pressurized or
             terrorized by someone. If someone threatens you for making a voting

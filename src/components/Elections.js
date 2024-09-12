@@ -4,16 +4,16 @@ const electionsData = [
   {
     title: 'Upcoming Elections :',
     elections: [
-      { name: 'UP state election:', date: '02-04-2022' },
+      { name: 'Karachi City election:', date: '02-04-2025' },
     ],
   },
   {
     title: 'Other Elections :',
     elections: [
-      { name: 'Manipur state Election:', date: '04-04-2022' },
-      { name: 'Chhatisgarh state Election:', date: '12-04-2022' },
-      { name: 'Bangluru state Election:', date: '20-04-2022' },
-      { name: 'Gurgaon Municipal Corporation', date: '26-04-2022' },
+      { name: 'Mardan Division Election:', date: '04-04-2025' },
+      { name: 'Peshawar Division Election:', date: '12-04-2025' },
+      { name: 'Khyber Pakhtunkhwa Province Election:', date: '20-04-2025' },
+      { name: 'District Swabi Election', date: '26-04-2025' },
     ],
   },
 ];

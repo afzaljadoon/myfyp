@@ -19,7 +19,7 @@ const RegistrationForm = () => {
           </div>
 
           {/* Form Section */}
-          <div className="w-full max-w-md">
+          <div className="w-full max-w-md mt-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center md:text-left">
               Registration Form
             </h2>
@@ -80,11 +80,11 @@ const RegistrationForm = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Aadhar Number</label>
+                <label className="block text-sm font-medium mb-2">CNIC Number</label>
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400"
-                  placeholder="Aadhar Number"
+                  placeholder="CNIC Number"
                 />
               </div>
               <div className="flex justify-center">
