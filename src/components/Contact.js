@@ -55,7 +55,7 @@ const Contact = () => {
             </button>
             <div className="text-center text-gray-400">
               <p>Or reach us directly at</p>
-              <p className="text-blue-400 cursor-pointer">jadoonafzal027@gmail.com</p>
+              <a href="mailto:jadoonafzal027@gmail.com" className="text-blue-400 cursor-pointer">jadoonafzal027@gmail.com</a>
             </div>
           </div>
         </form>
