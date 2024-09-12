@@ -11,7 +11,7 @@ import React from 'react';
 import Candidatedetail from './components/Candidatedetail';
 import Changephase from './components/Changephase';
 import Addcandidate from './components/Addcandidate';
-import Adminregister from './components/Adminregister';
+// import Adminregister from './components/Adminregister';
 import Logout from './components/Logout';
 // import ElectionManager from './components/ElectionManager';
 
@@ -30,11 +30,10 @@ function App() {
         <Route path="/proelection" element={<Proelection />} />
         <Route path="/voting" element={<Voting />} />
         <Route path="/adminlogin" element={<Adminlogin />} />
-        {/* <Route path="/admindashboard" element={<AdminDashboard/>} /> */}
         <Route path="/candidatedetail" element={<Candidatedetail />} />
         <Route path="/changephase" element={<Changephase />} />
         <Route path="/addcandidate" element={<Addcandidate/>} />
-        <Route path="/adminregister" element={<Adminregister/>} />
+        {/* <Route path="/adminregister" element={<Adminregister/>} /> */}
         <Route path="/logout" element={<Logout />} />
         {/* <Route path="/electionmanager" element={<ElectionManager/>} /> */}
       

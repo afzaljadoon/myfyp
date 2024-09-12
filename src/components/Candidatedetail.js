@@ -7,7 +7,6 @@ import {
   FaSave,
   FaInfoCircle,
   FaUserPlus,
-  FaRegRegistered,
   FaExchangeAlt,
   FaSignOutAlt,
   FaBars,
@@ -106,14 +105,6 @@ const Candidatedetail = () => {
                 <a href="/addcandidate" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
-                </a>
-              </li>
-            </Link>
-            <Link to="/adminregister">
-              <li className={`w-full ${location.pathname === '/adminregister' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a href="/adminregister" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
-                  <FaRegRegistered className="text-lg" />
-                  <p className="ml-2">Register</p>
                 </a>
               </li>
             </Link>
