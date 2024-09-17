@@ -53,7 +53,6 @@ const Candidatedetail = () => {
     });
   };
 
-  // Function to reset votes for all candidates
   const handleResetVotes = () => {
     const updatedCandidates = candidates.map(candidate => ({
       ...candidate,
@@ -63,7 +62,6 @@ const Candidatedetail = () => {
     localStorage.setItem('candidates', JSON.stringify(updatedCandidates));
   };
 
-  // Close the sidebar when clicked outside or on the close button
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
@@ -85,7 +83,11 @@ const Candidatedetail = () => {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-screen w-64 bg-gray-700 shadow-md z-30 transform transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
+      <div
+        className={`fixed top-0 left-0 h-screen w-64 bg-gray-700 shadow-md z-30 transform transition-transform duration-300 ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } md:relative md:translate-x-0`}
+      >
         <div className="h-16 flex items-center justify-between bg-gray-800 p-4">
           <h1 className="text-2xl font-bold text-white">Sidebar</h1>
           <FaTimes className="text-white text-2xl md:hidden" onClick={closeSidebar} />
@@ -93,24 +95,45 @@ const Candidatedetail = () => {
         <div className="mt-4">
           <ul className="space-y-2">
             <Link to="/candidatedetail">
-              <li className={`w-full ${location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a href="/candidatedetail" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+              <li
+                className={`w-full ${
+                  location.pathname === '/candidatedetail' ? 'bg-gray-500 text-gray-700' : ''
+                }`}
+              >
+                <a
+                  href="/candidatedetail"
+                  className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500"
+                >
                   <FaInfoCircle className="text-lg" />
                   <p className="ml-2">Candidate Details</p>
                 </a>
               </li>
             </Link>
             <Link to="/addcandidate">
-              <li className={`w-full ${location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a href="/addcandidate" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+              <li
+                className={`w-full ${
+                  location.pathname === '/addcandidate' ? 'bg-gray-500 text-gray-700' : ''
+                }`}
+              >
+                <a
+                  href="/addcandidate"
+                  className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500"
+                >
                   <FaUserPlus className="text-lg" />
                   <p className="ml-2">Add Candidate</p>
                 </a>
               </li>
             </Link>
             <Link to="/changephase">
-              <li className={`w-full ${location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''}`}>
-                <a href="/changephase" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+              <li
+                className={`w-full ${
+                  location.pathname === '/changephase' ? 'bg-gray-500 text-gray-700' : ''
+                }`}
+              >
+                <a
+                  href="/changephase"
+                  className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500"
+                >
                   <FaExchangeAlt className="text-lg" />
                   <p className="ml-2">Change Phase</p>
                 </a>
@@ -118,7 +141,10 @@ const Candidatedetail = () => {
             </Link>
             <Link to="/logout">
               <li className="w-full text-gray-700">
-                <a href="/logout" className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500">
+                <a
+                  href="/logout"
+                  className="flex items-center p-4 text-gray-300 hover:bg-gray-600 hover:text-gray-500"
+                >
                   <FaSignOutAlt className="text-lg" />
                   <p className="ml-2">LogOut</p>
                 </a>
@@ -141,9 +167,9 @@ const Candidatedetail = () => {
               <tr className="bg-gray-700">
                 <th className="p-2 text-left w-1/6">Name</th>
                 <th className="p-2 text-left w-1/6">Party</th>
-                <th className="p-2 text-left w-1/6">Age</th>
-                <th className="p-2 text-left w-1/6">Qualification</th>
-                <th className="p-2 text-left w-1/7">Icon</th>
+                <th className="p-2 text-left w-1/6 hidden sm:table-cell">Age</th>
+                <th className="p-2 text-left w-1/6 hidden sm:table-cell">Qualification</th>
+                <th className="p-2 text-left w-1/7 hidden sm:table-cell">Icon</th>
                 <th className="p-2 text-left w-1/7">Votes</th>
                 <th className="p-2 text-left w-1/7">Actions</th>
               </tr>
@@ -171,7 +197,7 @@ const Candidatedetail = () => {
                           className="w-full bg-gray-600 text-white p-2 rounded-sm"
                         />
                       </td>
-                      <td className="p-2">
+                      <td className="p-2 hidden sm:table-cell">
                         <input
                           type="text"
                           name="age"
@@ -180,7 +206,7 @@ const Candidatedetail = () => {
                           className="w-full bg-gray-600 text-white p-2 rounded-sm"
                         />
                       </td>
-                      <td className="p-2">
+                      <td className="p-2 hidden sm:table-cell">
                         <input
                           type="text"
                           name="qualification"
@@ -189,7 +215,7 @@ const Candidatedetail = () => {
                           className="w-full bg-gray-600 text-white p-2 rounded-sm"
                         />
                       </td>
-                      <td className="p-2">
+                      <td className="p-2 hidden sm:table-cell">
                         <input
                           type="text"
                           name="icon"
@@ -201,7 +227,7 @@ const Candidatedetail = () => {
                       <td className="p-2">{candidate.votes || 0}</td>
                       <td className="p-2">
                         <button
-                          className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded transition-all"
+                          className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-sm"
                           onClick={() => handleSave(index)}
                         >
                           <FaSave />
@@ -212,21 +238,21 @@ const Candidatedetail = () => {
                     <>
                       <td className="p-2">{candidate.name}</td>
                       <td className="p-2">{candidate.party}</td>
-                      <td className="p-2">{candidate.age}</td>
-                      <td className="p-2">{candidate.qualification}</td>
-                      <td className="p-2">
-                        {React.createElement(Icons[candidate.icon] || Icons.FaUser)}
+                      <td className="p-2 hidden sm:table-cell">{candidate.age}</td>
+                      <td className="p-2 hidden sm:table-cell">{candidate.qualification}</td>
+                      <td className="p-2 hidden sm:table-cell">
+                        {React.createElement(Icons[candidate.icon])}
                       </td>
                       <td className="p-2">{candidate.votes || 0}</td>
-                      <td className="p-2 space-x-2">
+                      <td className="p-2 flex">
                         <button
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded transition-all"
+                          className="bg-yellow-600 hover:bg-yellow-700 text-white p-1 sm:px-3 rounded-md"
                           onClick={() => handleEdit(index)}
                         >
                           <FaEdit />
                         </button>
                         <button
-                          className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded transition-all"
+                          className="bg-red-600 hover:bg-red-700 text-white p-1 sm:px-3 rounded-md ml-2"
                           onClick={() => handleDelete(index)}
                         >
                           <FaTrashAlt />
@@ -238,14 +264,14 @@ const Candidatedetail = () => {
               ))}
             </tbody>
           </table>
-          <div className="mt-4 text-right">
-            <button
-              className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-all"
-              onClick={handleResetVotes}
-            >
-              Reset Votes
-            </button>
-          </div>
+
+          {/* Reset Votes Button */}
+          <button
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 mt-4 rounded-md"
+            onClick={handleResetVotes}
+          >
+            Reset Votes
+          </button>
         </div>
       </div>
     </div>
