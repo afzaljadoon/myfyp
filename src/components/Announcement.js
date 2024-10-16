@@ -41,7 +41,7 @@ const Announcement = () => {
                 <tr
                   key={index}
                   className={`${
-                    winner?.name === candidate.name ? 'bg-green-600' : 'bg-gray-700'
+                    winner?.name === candidate.name ? 'bg-green-800' : 'bg-gray-700'
                   } text-white hover:bg-gray-600 transition-all`}
                 >
                   <td className="py-2 px-4">{candidate.name}</td>
@@ -54,7 +54,7 @@ const Announcement = () => {
         </div>
 
         {winner && (
-          <div className="bg-green-600 text-center p-4 rounded-lg shadow-lg mt-6">
+          <div className="bg-green-800 text-center p-4 rounded-sm shadow-lg mt-6">
             <h2 className="text-xl font-bold mb-2">Winner</h2>
             <p className="text-lg">
               {winner.name} from {winner.party} with {winner.votes} votes!
