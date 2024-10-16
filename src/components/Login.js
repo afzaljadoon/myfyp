@@ -75,9 +75,9 @@ const Login = () => {
                 />
               </div>
               <div className="text-sm text-gray-400 text-center md:text-left">
-                <Link to="/registrationform">
-                  <span className="text-blue-600 ml-1">Register now</span>
-                </Link>
+              <Link to="/registrationform">
+                 <a href="#register">Not a user? <span className="text-blue-600 ml-1">Register now</span></a>
+              </Link>
               </div>
               <div className="flex justify-center md:justify-start">
                 <button
