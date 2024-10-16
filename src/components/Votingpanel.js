@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import * as Icons from 'react-icons/fa'; // Import all Fa icons
+import { useNavigate } from 'react-router-dom'; // Add react-router-dom for navigation
 
 const VotingPanel = () => {
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [candidates, setCandidates] = useState([]);
   const [votingAllowed, setVotingAllowed] = useState(false); // Control whether voting is allowed
   const [timeLeft, setTimeLeft] = useState(null); // Time left for voting
+  const navigate = useNavigate(); // useNavigate for routing
 
   // Retrieve the candidates and check voting phase when the component mounts
   useEffect(() => {
@@ -69,6 +71,13 @@ const VotingPanel = () => {
     }
   };
 
+  // Handle logout and navigate to home page
+  const handleLogout = () => {
+    localStorage.removeItem('votingPhase');
+    localStorage.removeItem('votingEndTime');
+    navigate('/'); // Redirect to home page
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="bg-gray-800 text-white p-4 sm:p-6 rounded shadow-md w-full max-w-2xl">
@@ -118,8 +127,7 @@ const VotingPanel = () => {
               <span className="whitespace-nowrap">{candidate.name}</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center m-2 sm:mb-0">
-              {/* Center the party name */}
-              <span className="items-center md:w-40 md:mr-24 sm:mr-8 whitespace-nowrap ">{candidate.party}</span>
+              <span className="items-center md:w-40 md:mr-24 sm:mr-8 whitespace-nowrap">{candidate.party}</span>
               {React.createElement(Icons[candidate.icon] || Icons.FaUserPlus, { className: 'mt-2 w-6 h-6' })}
             </div>
           </div>
@@ -146,6 +154,16 @@ const VotingPanel = () => {
             </button>
           </div>
         )}
+
+        {/* Logout Button */}
+        <div className="mt-6 flex justify-center">
+          <button
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-sm transition-all"
+            onClick={handleLogout}
+          >
+            LOGOUT
+          </button>
+        </div>
       </div>
     </div>
   );

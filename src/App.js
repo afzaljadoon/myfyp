@@ -6,6 +6,7 @@ import Contact from './components/Contact'
 import Proelection from './components/Proelection'
 import Voting from './components/Voting'
 import Scroll from './components/Scroll'
+import Announcement from './components/Announcement';
 import Adminlogin from './components/Adminlogin';
 import React from 'react';
 import Candidatedetail from './components/Candidatedetail';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/proelection" element={<Proelection />} />
         <Route path="/voting" element={<Voting />} />
+        <Route path="/announcement" element={<Announcement />} />
         <Route path="/adminlogin" element={<Adminlogin />} />
         <Route path="/candidatedetail" element={<Candidatedetail />} />
         <Route path="/changephase" element={<Changephase />} />
