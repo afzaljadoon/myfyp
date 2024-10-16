@@ -16,12 +16,12 @@ const Header = () => {
           <Link to="/proelection" className="text-white hover:text-blue-300">PROFILE</Link>
           <Link to="/contact" className="text-white hover:text-blue-300">CONTACT US</Link>
           <Link to="/voting">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-blue-600 transition duration-300">
+          {/* <button className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-blue-600 transition duration-300">
             VOTE
-          </button>
+          </button> */}
           </Link>
-          <Link to="/login">
-            <button className="bg-red-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-red-600">LOGIN</button>
+          <Link to="/adminlogin">
+            <button className="bg-red-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-red-600">Admin Login</button>
           </Link>
         </div>
         <div className="md:hidden flex justify-end w-full">
@@ -45,12 +45,10 @@ const Header = () => {
               <Link to="/contact" className="block text-white hover:text-blue-300">CONTACT US</Link>
             </li>
             <li>
-              <Link to="/login">
-                <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-blue-700">VOTE</button>
+              <Link to="/adminlogin">
+                <button className="w-full bg-red-500 text-white px-4 py-2 mt-2 rounded-sm text-sm hover:bg-red-700">ADMIN LOGIN</button>
               </Link>
-              <Link to="/login">
-                <button className="w-full bg-red-500 text-white px-4 py-2 mt-2 rounded-sm text-sm hover:bg-red-700">LOGIN</button>
-              </Link>
+              
             </li>
           </ul>
         </div>
