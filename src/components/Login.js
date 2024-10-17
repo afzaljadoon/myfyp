@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       const res = await axios.post('http://localhost:5000/login', { email, password });
-
+      
       // Check for a successful login response
       if (res.status === 200) {
         setMessage(res.data.message); // Success message (if any)
@@ -39,12 +39,20 @@ const Login = () => {
     <div>
       <Header />
       <div className="bg-gray-900 text-white flex justify-center items-center min-h-screen py-10 px-5">
-        <div className="flex flex-col md:flex-row items-center p-10 rounded-sm shadow-lg">
-          <div className="mb-6 md:mb-0 md:mr-10">
-            <img src={loginp} alt="Login" className="w-full h-auto max-w-xs md:max-w-sm rounded-sm" />
+        <div className="flex flex-col md:flex-row items-center p-10 rounded-sm shadow-lg w-full max-w-5xl">
+          {/* Image Section */}
+          <div className="mb-6 md:mb-0 lg:mr-52 md:w-5/12 flex justify-center">
+            <img
+              src={loginp}
+              alt="Login"
+              className="w-72 h-72 md:w-90 md:h-90 lg:w-90 lg:h-90 rounded-sm" // Responsive image handling
+              
+            />
           </div>
-          <div className="w-full max-w-md md:mr-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">Login</h2>
+
+          {/* Form Section */}
+          <div className="w-full md:w-7/12 md:ml-6">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-8 text-center md:text-left">Login</h2>
 
             {/* Display error or success message */}
             {message && (
@@ -76,7 +84,7 @@ const Login = () => {
               </div>
               <div className="text-sm text-gray-400 text-center md:text-left">
               <Link to="/registrationform">
-                 <a href="#register">Not a user? <span className="text-blue-600 ml-1">Register now</span></a>
+                   <a href="#register">Not a user? <span className="text-blue-600 ml-1">Register now</span></a>
               </Link>
               </div>
               <div className="flex justify-center md:justify-start">
